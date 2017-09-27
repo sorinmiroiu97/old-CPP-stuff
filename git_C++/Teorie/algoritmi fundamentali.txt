@@ -1,0 +1,82 @@
+ALGORITMI FUNDAMENTALI
+/*ALGORITMI CU CIFRELE UNUI NUMAR*/
+[…]cin>>n;while(n>0){c=n%10;n=n/10;/*prelucrarea cifrelor.ex:p(produsul)=p*c;s(suma)=s+c;etc*/}
+/*ALGORITMI DE DIVIZIBILITATE*//*algoritmul de aflare a celui mai mare divizor comn a 2 numere date(prin impartirirepetate*/
+[…]cin>>a>>b;rest=a%b;while(rest!=0){a=b;b=rest;rest=a%b;}cout<<”cmmdc=”<<b;
+/*algoritmul de aflare a celui mai mare divizor comn a 2 numere date(prin scaderirepetate*/
+[…]cin>>a>b;for(i=1;i<=n;i++){if(a>b)a=a-b;elseb=b-a;}cout<<"cmmdc="<<a;
+/*algoritmul de aflare a celui mai mic multiplu comun a doua numere*/
+[…]cin>>a>>b;x=a;y=b;for(i=1;i<=n;i++){if(a>b)a=a-b;elseb=b-a;}cout<<”cmmmc=”<<(x*y)/a;
+Algoritmul pentru numar palindrom :
+Numerele palindrom sunt numerele egale cu imaginea lor in oglinda.
+#include <iostream.h>
+void main ()
+{int a,im,x;
+ cin>>a;
+x=a;        //creem o copie a numarului citit deoarece acesta se va pierde .
+im=0;      //initializam imaginea cu 0 deoarece in variabila im vom construi inversul numarului.
+ while (a!=0)
+  {im=im*10+a%10;
+   a=a/10;
+  }
+if (im==x)     //verificam daca numarul este egal cu imaginea.
+cout<<"numarul "<<x<<" este palindrom";
+}
+   
+Picture
+Algoritmul pentru numar prim :
+Numarul prim este un numar care se divide decat cu el insusi si cu 1.
+#include <iostream.h>
+void main ()
+{int a,d,ok,x;
+ cin>>a;
+ok=1;            //folosim o variabila ok prin care presupunem ca numarul este prim.
+ if(a<=2)       //daca numarul este <=2 atunci nu este prim.
+  ok=0;
+else
+ for (x=2;x<=a/2;x++)
+  if (a%x==0)     //daca numarul se divide la vreun numar de la 2 la jumatatea sa ,acesta nu este prim.
+   ok=0;
+if (ok==1)
+cout<<"numarul "<<a<<" este prim ";
+}
+   
+Picture
+Algoritmul pentru aflarea cifrelor unui numar :
+#include <iostream.h>
+void main()
+{int x,c;
+ cin>>x;
+ while (x!=0)
+ {c=x%10;
+  x=x/10;
+  //aici se mai pot prelucra cifrele in functie de datele problemei
+}
+}
+Algoritmul de aflare al celui mai mare divizor comun (c.m.m.d.c)
+#include <iostream.h>
+void main ()
+{int a,b,r;
+cin>>a>>b;
+while (b!=0)
+{r=a%b;
+ a=b;
+ b=r;
+}
+//in variabila a este pastrat cel mai mare divizor comun.
+Algoritmul de descompunere in factori primi
+#include<iostream.h>
+void main()
+{int n,d=2,p;
+cin>>n;
+while(n>1)
+{p=0;
+ while(n%d==0)
+ {p=p+1;
+  n=n/d;
+ }
+ if(p)
+ cout<<d<<" la puterea "<<p<<endl;
+ d=d+1;
+}
+} 

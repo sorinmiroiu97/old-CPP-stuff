@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1381819031 source:e:\clase\10 c 2013-2014\vectori a si b\main.cpp
+	<iostream>
+	<math.h>
+	<fstream>
+

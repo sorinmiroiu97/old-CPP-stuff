@@ -1,0 +1,4 @@
+cate cifre are nr citit: 8
+de casuma cifrelor numarului citit: 30
+cea mai mare cifra a numarului citit 8
+te ori apare 'stefan banica' 3 in numarul citit: 4

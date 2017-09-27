@@ -1,0 +1,4 @@
+﻿  main.cpp
+e:\sorin's stuff\c++\selflearning\random_numbers\random_numbers\main.cpp(9): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  random_numbers.vcxproj -> E:\Sorin's stuff\C++\selflearning\random_numbers\Debug\random_numbers.exe
+  random_numbers.vcxproj -> E:\Sorin's stuff\C++\selflearning\random_numbers\Debug\random_numbers.pdb (Partial PDB)

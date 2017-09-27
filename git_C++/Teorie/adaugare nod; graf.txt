@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+
+struct nod {int info;
+int urm;}l[100];
+
+int opt,s[100],prim=-1,n=0,adr,x;
+int ex_spatiu()
+{
+    if(n<99)return 1; else return 0;
+}
+void aloca_spatiu_de_memorie(int &adr)
+{
+    int i=1; // alegem primul spatiu liber, adica s[i]=0
+    while(s[i]==1)i++;
+    adr=i; // in variabila adr se retine adresa primului nod liber
+    s[i]=1; // marchez faptul ca spatiul de memorie a fost ocupat
+    n++; // creste nr. de noduri ai listei
+}
+
+void adauga(int &adr)
+{
+    int p=prim;
+    aloca_spatiu_de_memorie(adr);
+    cout<<"dati informatia utila: "; cin>>x;
+    l[adr].info=x;
+    l[adr].urm=-1;
+    if(prim=-1)prim=adr;
+
+    else { while(l[p].urm!=-1)
+        p=l[p].urm;
+            l[p].urm=adr;
+    }
+
+}
+void parcurgere()
+{
+    int p=prim;
+    if(p==-1)
+        cout<<"Lista este vida\n";
+    else
+    while(l[p].urm!=-1) //cat timp nu ajungem la sf. listei
+    {cout<<l[p].info<<" ";//afisez informatia din fiacare nod
+    p=l[p].urm;//trece la urmatorul nod din lista
+
+    }cout<<l[p].info;
+    cout<<"\n";
+}
+int main ()
+{do{
+
+cout<<"1.Adaugare nod\n";
+cout<<"2.Parcurgere lista \n";
+cout<<"3.Inserare nod inaintea unui nod\n";
+cout<<"4.Inserare nod dupa nod dat \n";
+cout<<"5.Stergerea unui nod dat\n";
+cout<<"6.Modificarea informatiei utile dintr-un nod dat \n";
+cout<<"7.Iesire\n";
+cout<<"Optiunea utilizatorului\n";cin>>opt;
+if(opt==1)
+{if(ex_spatiu())
+    adauga(adr);
+
+}
+if(opt==2)
+{parcurgere();
+
+}
+
+
+}while(opt!=7);
+return 0;
+}
